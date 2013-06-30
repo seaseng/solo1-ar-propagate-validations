@@ -1,0 +1,12 @@
+<%unless @event.valid?%>
+<h3>Errors Asshole</h3>
+  <%@event.errors.each do |attr, msg|%>
+  <p><%="#{attr} - #{msg}"%></p>
+<%end%>
+<%else%>  
+  <h2>New Event Created!</h3>  
+  <h3>Title: <%=@event.title%></h3>    
+  <h3>Orgnanizer Name: <%=@event.organizer_name%></h3>
+  <h3>Orgnaizer Title: <%=@event.organizer_email%></h3>
+  <h3>Date: <%=@event.date%></h3>
+<%end%>
